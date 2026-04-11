@@ -50,3 +50,4 @@
 #### We will have a html form in the index.ejs file that will send a post request to the server thus adding an element to the array.
 
 #### We must keep track of the index of each element in the array. To do this we must have a counter in the index.js file that increments by one every time we make a post. The blog post array will be a dictionary that is like the following  { index:incremental_number_at point_of_post_creation,post:user_input}. This information will be appended to the array in the /post_submit endpoint when the user clicks submit on the blog.
+
