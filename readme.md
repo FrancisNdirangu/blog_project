@@ -51,3 +51,10 @@
 
 #### We must keep track of the index of each element in the array. To do this we must have a counter in the index.js file that increments by one every time we make a post. The blog post array will be a dictionary that is like the following  { index:incremental_number_at point_of_post_creation,post:user_input}. This information will be appended to the array in the /post_submit endpoint when the user clicks submit on the blog.
 
+#### so we will now make a for loop that will increments over the array to then post each blog_post element in the ejs file. We need to make sure that the elements of the array are in the res.locals
+
+### How we will deleting work
+
+#### We want the user to be able to delete each post by clicking the delete button that is on each post.
+
+#### So the delete button of the post 
