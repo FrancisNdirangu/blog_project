@@ -19,7 +19,11 @@ app.post('/create/new', (req,res) => {
 
     const blog_entry = req.body.blog_input;
     console.log(`input received: ${blog_entry}`);
-    res.send(`Thanks for sending ${blog_entry}`)
+    blogs.push(blog_entry);
+    console.log(`blogs looks like this: ${blogs}`);
+    // res.send(`Thanks for sending ${blog_entry}`);
+    res.render('index.ejs');
+
 })
 
 
