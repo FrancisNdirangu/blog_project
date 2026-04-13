@@ -27,10 +27,16 @@ app.post('/create/new', (req,res) => {
 });
 
 app.get('/view_blogs', (req,res)=> {
+
+    // blogs.forEach( (content,index) => {
+        // res.locals[`content_${index}`] = content;
+    // })
+    res.locals.blogs_content = blogs
+
     res.render('view_blogs.ejs');
 });
 
 
 app.listen(port, () => {
-    console.log(`Port listening on ${port}`);
+    console.log(`Port listening on ${port}`); 
 });
