@@ -9,9 +9,15 @@
     <h1>View page</h1>
 
     <div>
-        <p> <% locals.blogs_content.forEach(element => { %>
-            <h1> <%= element %></h1>
+        <p> <% locals.blogs_content.forEach((element,index) => { %>
+            
+            <h1> blog <%= index %></h1>
+            <p><%= element %> </p>
        <% }); %> </p>
     </div>
+
+    <form action="/" method="get">
+        <button>Home Page</button>
+    </form>
 </body>
 </html>
