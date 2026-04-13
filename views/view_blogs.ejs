@@ -8,20 +8,20 @@
 <body>
     <h1>View page</h1>
 
-    <div>
-        <p> <% locals.blogs_content.forEach((element,index) => { %>
-            
-            <h1> blog <%= index %></h1>
-            <p><%= element %> </p>
+<% if (locals.blogs_content && blogs_content.length > 0) { %>
+    <% blogs_content.forEach((element, index) => { %>
+        <div class="blog-container">
+            <h1>Blog <%= index + 1 %></h1>
+            <p><%= element %></p>
 
-            <form action="/blog/index" method="get">
-                <button>View this blog</button>
+            <form action="/blog/<%= index +1 %>" method="GET">
+                <button type="submit">View this blog</button>
             </form>
-       <% }); %> </p>
-    </div>
-
-    <form action="/" method="get">
-        <button>Home Page</button>
-    </form>
+        </div>
+        <hr>
+    <% }); %>
+<% } else { %>
+    <p>No blogs available to display.</p>
+<% } %>
 </body>
 </html>
