@@ -24,8 +24,11 @@ app.post('/create/new', (req,res) => {
     // res.send(`Thanks for sending ${blog_entry}`);
     res.render('index.ejs');
 
-})
+});
 
+app.get('/view_blogs', (req,res)=> {
+    res.render('view_blogs.ejs');
+});
 
 
 app.listen(port, () => {
