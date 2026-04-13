@@ -7,5 +7,14 @@
 </head>
 <body>
     <h1>Blog <%= locals.blog_index %> </h1>
+
+    <p> <%= blogs[locals.blog_index] %> </p>
+
+    <form action="/view_blogs" method="get">
+        <button>View all blogs</button>
+    </form>
+    <form action="/" method="get">
+        <button>Home page</button>
+    </form>
 </body>
 </html>

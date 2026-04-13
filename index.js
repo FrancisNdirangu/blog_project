@@ -39,6 +39,7 @@ app.get('/view_blogs', (req,res)=> {
 app.get('/blog/:id', (req,res)=> {
     const blog_id = req.params.id;
     res.locals.blog_index = blog_id;
+    res.locals.blogs = blogs;
     // res.send('Welcome to this individual blog');
     res.render('blog_id.ejs');
 });
