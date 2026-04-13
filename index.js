@@ -36,6 +36,9 @@ app.get('/view_blogs', (req,res)=> {
     res.render('view_blogs.ejs');
 });
 
+app.get('/blog/:id', (req,res)=> {
+    res.send('Welcome to this individual blog')
+})
 
 app.listen(port, () => {
     console.log(`Port listening on ${port}`); 
