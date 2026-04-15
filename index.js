@@ -47,7 +47,8 @@ app.get('/blog/:id', (req,res)=> {
 
 
 app.get(`/blog/:id/edit`, (req,res) => {
-    res.send('Edit Page');
+    // res.send('Edit Page');
+    res.render('edit_page.ejs');
 });
 
 app.listen(port, () => {
