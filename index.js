@@ -44,6 +44,12 @@ app.get('/blog/:id', (req,res)=> {
     res.render('blog_id.ejs');
 });
 
+
+
+app.get(`/blog/:id/edit`, (req,res) => {
+    res.send('Edit Page');
+});
+
 app.listen(port, () => {
     console.log(`Port listening on ${port}`); 
 });
