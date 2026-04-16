@@ -1,4 +1,5 @@
 import express from 'express'
+import methodOverride from 'method-override'
 
 const app = express();
 const port = 3000;
@@ -6,6 +7,8 @@ const port = 3000;
 app.use(express.static('public'));
 
 app.use(express.urlencoded({extended:true}));
+
+app.use(methodOverride('_method')); 
 
 //empty list we will store our blogs into
 var blogs = [];
@@ -46,13 +49,17 @@ app.get('/blog/:id', (req,res)=> {
 
 
 
-app.get(`/blog/:id/edit`, (req,res) => {
-    // res.send('Edit Page');
-    const blog_id = req.params.id;
-    res.locals.blog_index = blog_id;  
-    res.locals.blogs = blogs;
-    res.render('edit_page.ejs'); 
-});
+// app.get(`/blog/:id/edit`, (req,res) => {
+//     // res.send('Edit Page');
+//     const blog_id = req.params.id;
+//     res.locals.blog_index = blog_id;  
+//     res.locals.blogs = blogs;
+//     res.render('edit_page.ejs'); 
+    
+// });
+
+
+
 
 app.listen(port, () => {
     console.log(`Port listening on ${port}`); 

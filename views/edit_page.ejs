@@ -8,9 +8,8 @@
 <body>
     <h1>Edit Page</h1>
 
-    <form action="/blog/<%= locals.blogs %>" method="PATCH">
-        <input type="text" name="edited_text" value="<%= locals.blogs[locals.blog_index] %> ">
-        <button>Submit</button>
+
+    <button onclick="updateItem()"
     </form>
 </body>
 </html>
