@@ -8,8 +8,10 @@
 <body>
     <h1>Edit Page</h1>
 
-
-    <button onclick="updateItem()"
+    <form action="/blog/<%= locals.blog_index %>?_method=PUT" method="POST">
+        <textarea name="content"><%= post.content %></textarea>
+        <button type="submit">Update Post</button>
     </form>
+
 </body>
 </html>
