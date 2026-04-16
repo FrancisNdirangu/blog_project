@@ -49,16 +49,34 @@ app.get('/blog/:id', (req,res)=> {
 
 
 
-// app.get(`/blog/:id/edit`, (req,res) => {
-//     // res.send('Edit Page');
-//     const blog_id = req.params.id;
-//     res.locals.blog_index = blog_id;  
-//     res.locals.blogs = blogs;
-//     res.render('edit_page.ejs'); 
+app.get(`/blog/:id/edit`, (req,res) => {
+    // res.send('Edit Page');
+    const blog_id = req.params.id;
+    res.locals.blog_index = blog_id;  
+    res.locals.blogs = blogs;
+
+
+    const postToEdit  = blogs[blog_id];
+    res.locals.content = postToEdit;
+
+
+
+
+    res.render('edit_page.ejs'); 
     
-// });
+});
 
+app.put('/blog/:id',(req,res) => {
+    const blog_id = req.params.id;
+    
+    const updatedContent = req.body.updatedContent;
+    blogs[blog_id] = updatedContent;
+    console.log(blogs);
+    console.log(updatedContent);
 
+    res.redirect('/');
+
+});
 
 
 app.listen(port, () => {

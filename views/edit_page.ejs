@@ -9,7 +9,7 @@
     <h1>Edit Page</h1>
 
     <form action="/blog/<%= locals.blog_index %>?_method=PUT" method="POST">
-        <textarea name="content"><%= post.content %></textarea>
+        <textarea name="updatedContent"><%= locals.content %></textarea>
         <button type="submit">Update Post</button>
     </form>
 
