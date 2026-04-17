@@ -29,7 +29,7 @@ app.post('/create/new', (req,res) => {
 
 });
 
-app.get('/view_blogs', (req,res)=> {
+app.get('/view_blogs', (req,res)=> { 
 
     // blogs.forEach( (content,index) => {
         // res.locals[`content_${index}`] = content;
