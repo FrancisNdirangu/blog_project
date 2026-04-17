@@ -78,6 +78,15 @@ app.put('/blog/:id',(req,res) => {
 
 });
 
+app.delete('/blog/:id', (req,res) => {
+    const blog_id = req.params.id;
+    // console.log(blog_id)
+    console.log(blogs.length);
+    blogs.splice(blog_id,1);
+    console.log(blogs.length);
+    res.redirect('/');
+})
+
 
 app.listen(port, () => {
     console.log(`Port listening on ${port}`); 
