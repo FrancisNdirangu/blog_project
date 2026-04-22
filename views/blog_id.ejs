@@ -1,3 +1,6 @@
+<%- include('partials/header.ejs') %>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +14,10 @@
     <p> <%= blogs[locals.blog_index] %> </p>
 
     <form action="/view_blogs" method="get">
-        <button>View all blogs</button>
+        <button type="button" class="btn btn-primary">View all blogs</button>
     </form>
     <form action="/" method="get">
-        <button type="button" class="btn btn-secondary" >Home page</button>
+        <button type="button" class="btn btn-secondary">Home page</button>
     </form>
     
     <form action="/blog/<%= locals.blog_index %>/edit " method="GET">
